@@ -1,2 +1,2 @@
-# web-nextjs-sample
-Next.js sample project
+# Current Weather
+Current weather app by Next.js.
