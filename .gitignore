@@ -23,6 +23,7 @@
 # misc
 .DS_Store
 *.pem
+.open-next
 
 # debug
 npm-debug.log*
@@ -50,6 +51,7 @@ next-env.d.ts
 # Env
 .env
 .env.*
+.dev.vars
 
 # Vite
 .vite/
