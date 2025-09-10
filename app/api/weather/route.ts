@@ -29,7 +29,8 @@ export async function GET(request: Request) {
     return NextResponse.json({ message: "Latitude and longitude are required." }, { status: 400 });
   }
 
-  const API_KEY = process.env.OPENWEATHER_API_KEY;
+    // @ts-expect-error: due to `globalThis` is any
+  const API_KEY = process.env.OPENWEATHER_API_KEY || (typeof globalThis !== 'undefined' && globalThis.OPENWEATHER_API_KEY);
 
   if (!API_KEY) {
     console.error("OpenWeatherMap API key is not set in environment variables.");
